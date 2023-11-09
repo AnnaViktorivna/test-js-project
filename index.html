@@ -8,14 +8,27 @@
   </head>
   <body>
     <div class="wrap-task">
-      <a href="" target="_blank" class="link-task">Task_1</a>
+      <button onclick="openNewTab()">Task1</button>
+
+      <script>
+        function openNewTab() {
+          // Відкрити нову вкладку
+          const newTab = window.open("", "_blank");
+
+          // Перевірка, чи вікно було успішно відкрито
+          if (newTab) {
+            // Вставити текст на сторінку нової вкладки
+            newTab.document.write("<h1>Привіт, це завдання 1!</h1>");
+            newTab.document.write(
+              "<p>Станція з продажу ремонтних дроїдів готова до запуску, залишилося написати програмне забезпечення для відділу продажів. Оголоси функцію makeTransaction, яка очікує два параметри, значення яких будуть задаватися під час її виклику:quantity— перший параметр, число, що містить кількість замовлених дроїдів pricePerDroid — другий параметр, число, що містить вартість одного дроїда Доповни код функції так, щоб вона повертала рядок з повідомленням про покупку ремонтних дроїдів:You ordered quantity droids worth totalPrice credits!, де: quantity— це кількість замовлених дроїдів \br totalPrice — це загальна вартість замовлення, тобто вартість усіх замовлених дроїдів</p>"
+            );
+          } else {
+            alert(
+              "Не вдалося відкрити нову вкладку. Перевірте налаштування блокування вікон в браузері."
+            );
+          }
+        }
+      </script>
     </div>
-    <div class="wrap-task">
-      <a href="" target="_blank" class="link-task">Task_2</a>
-    </div>
-    <div class="wrap-task">
-      <a href="" target="_blank" class="link-task">Task_3</a>
-    </div>
-    <script src="./js/test-task.js" defer></script>
   </body>
 </html>
