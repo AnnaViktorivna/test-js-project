@@ -1,0 +1,14 @@
+.wrap-task {
+  width: 100px;
+  height: 400px;
+  background-color: green;
+  display: inline-block;
+  gap: 15px;
+}
+
+.link-task {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: aliceblue;
+}
